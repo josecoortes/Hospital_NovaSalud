@@ -1,0 +1,121 @@
+:root {
+    --color-azul: #0056b3;
+    --color-fondo: #f4f6f9;
+    --color-texto: #333;
+    --blanco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--color-azul);
+    color: var(--blanco);
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: var(--color-azul);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #004494;
+}
+
+.cerrar_sesion {
+    margin-top: 20px;
+    color: red;
+    text-decoration: none;
+}
+
+.titulo-login {
+    color: var(--color-azul);
+}
+
+.enlace-inicio {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.enlace-detalle {
+    color: var(--color-azul);
+    float: right;
+}
+
+.listas {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.div-titulo {
+    margin-bottom: 15px;
+}
+
+.input-login {
+    padding: 10px;
+    width: 80%;
+}
+
+.div-login {
+    width: 90%;
+    max-width: 800px;
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 175px;
+}
+
+.form-crear-citas {
+    width: 90%;
+    max-width: 800px;
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}

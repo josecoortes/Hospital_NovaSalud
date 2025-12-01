@@ -1,0 +1,45 @@
+// styles/_components.scss
+@use '_variables' as v;
+@use '_mixins' as m;
+
+.login-card {
+  background-color: v.$color-white;
+  padding: 2rem;
+  border-radius: v.$border-radius;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  
+  // Nesting (Anidado)
+  h2 {
+    color: v.$color-primary;
+    margin-top: 0;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; // Para que el padding no rompa el ancho
+  }
+}
+
+// Implementación del Mixin de botón
+.btn {
+  width: 100%;
+  
+  &--primary {
+    @include m.button-style(v.$color-primary, v.$color-white);
+  }
+}

@@ -1,0 +1,14 @@
+// styles/main.scss
+
+// 1. Configuración
+@use '_variables';
+@use '_mixins';
+
+// 2. Base y Layout
+@use '_layout';
+
+// 3. Componentes
+@use '_components';
+
+// 4. Vistas
+@use '_pages';

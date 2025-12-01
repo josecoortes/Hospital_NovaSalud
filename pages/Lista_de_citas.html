@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Citas</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../estilos/estilos.css">
 </head>
 <body>
 
@@ -37,13 +37,18 @@
         <h3>Crear cita</h3>
         <form action="index.html">
             <div class="div-titulo">
-                <label for="text">Nombre del paciente:</label>
-                <input class="input-login" type="text" placeholder="Usuario" required>
+                <label for="text">Nombre paciente:</label>
+                <input class="input-login" type="text" required>
             </div>
             <div class="div-titulo">
-                <input class="input-login" type="password" placeholder="Contraseña" required>
+                <label for="text">Fecha y hora:</label>
+                <input class="input-login" type="date" required>
             </div>
-            <button type="submit" class="btn">Entrar</button>
+            <div class="div-titulo">
+                <label for="text">Motivo de cita:</label>
+                <input class="input-login" type="text" required>
+            </div>
+            <button type="submit" class="btn">Añadir consulta ➕</button>
         </form>
     </div>
     </main>

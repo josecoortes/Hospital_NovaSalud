@@ -90,7 +90,10 @@ nav {
 }
 
 .div-titulo {
+    margin-top: 15px;
     margin-bottom: 15px;
+    text-align: center;
+    justify-content: center;
 }
 
 .input-login {

@@ -1,14 +1,14 @@
 // styles/main.scss
 
-// 1. Configuración
-@use '_variables';
-@use '_mixins';
+// 1. Variables y Herramientas (Primero siempre)
+@use 'variables';
+@use 'mixins';
 
-// 2. Base y Layout
-@use '_layout';
+// 2. Estructura base
+@use 'layout';
 
-// 3. Componentes
-@use '_components';
+// 3. Piezas de la web (Tarjetas, formularios...)
+@use 'components';
 
-// 4. Vistas
-@use '_pages';
+// 4. Diseños de páginas específicas (Mapa, Login...)
+@use 'pages';

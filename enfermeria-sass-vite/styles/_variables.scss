@@ -1,13 +1,26 @@
-// styles/_variables.scss
+// COLORES CORPORATIVOS
+$color-primario: #e91e63;   // Rosa enfermería
+$color-secundario: #880e4f; // Rosa oscuro
+$color-fondo: #fce4ec;      // Fondo rosita muy pálido
+$color-texto: #333333;
+$blanco: #ffffff;
 
-// Colores Corporativos (Distintos al CSS puro para notar el cambio)
-$color-primary: #e91e63;   // Rosa enfermería
-$color-secondary: #880e4f;
-$color-bg: #fce4ec;        // Fondo rosado muy claro
-$color-text: #333;
-$color-white: #ffffff;
+// COLORES PARA EL MAPA DE CAMAS
+// Urgente (Rojo)
+$color-urgente-bg: #ffebee;
+$color-urgente-borde: #c62828;
+$color-urgente-texto: #b71c1c;
 
-// Fuentes y Tamaños
-$font-stack: 'Helvetica Neue', sans-serif;
-$border-radius: 8px;
-$spacing-unit: 1rem;
+// Ocupada (Azul)
+$color-ocupada-bg: #e3f2fd;
+$color-ocupada-borde: #1565c0;
+$color-ocupada-texto: #0d47a1;
+
+// Libre (Verde)
+$color-libre-bg: #e8f5e9;
+$color-libre-borde: #2e7d32;
+$color-libre-texto: #1b5e20;
+
+// OTRAS VARIABLES
+$radio-borde: 8px;
+$fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

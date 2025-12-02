@@ -1,32 +1,45 @@
-// styles/_layout.scss
-@use '_variables' as v; // Importante para leer colores
-@use '_mixins' as m;    // Importante para usar mixins
+@use 'variables' as v; // Importamos variables para usarlas
+@use 'mixins' as m;    // Importamos mixins
+
+* {
+    box-sizing: border-box;
+}
 
 body {
-  background-color: v.$color-bg;
-  font-family: v.$font-stack;
-  color: v.$color-text;
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: v.$fuente-principal;
+    background-color: v.$color-fondo;
+    color: v.$color-texto;
 }
 
 .header {
-  background-color: v.$color-secondary;
-  color: v.$color-white;
-  padding: v.$spacing-unit;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  a {
-    color: v.$color-white;
-    text-decoration: none;
-    font-size: 0.9rem;
+    background-color: v.$color-secundario;
+    color: v.$blanco;
+    padding: 1rem 2rem;
     
-    &:hover {
-      text-decoration: underline;
+    // Usamos flexbox para separar título y menú
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+    h1 {
+        margin: 0;
+        font-size: 1.5rem;
     }
-  }
+
+    a {
+        color: v.$blanco;
+        text-decoration: none;
+        font-weight: bold;
+        border: 1px solid v.$blanco;
+        padding: 5px 10px;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: v.$blanco;
+            color: v.$color-secundario;
+        }
+    }
 }

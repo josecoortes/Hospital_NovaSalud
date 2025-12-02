@@ -1,9 +1,38 @@
 // styles/_pages.scss
-@use '_mixins' as m;
+@use 'mixins' as m;
+@use 'variables' as v;
 
+// === PÁGINA DEL MAPA ===
+.mapa-hospital {
+    // ¡ESTOS SON LOS MÁRGENES QUE FALTABAN!
+    padding: 3rem 2rem; 
+    max-width: 1200px;
+    margin: 0 auto; // Centra todo el contenido en pantallas grandes
+
+    h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        color: v.$color-secundario;
+    }
+
+    // EL GRID (LA REJILLA)
+    .grid-habitaciones {
+        display: grid;
+        // Crea espacio entre las tarjetas
+        gap: 25px; 
+        
+        // Grid responsive automático:
+        // Las tarjetas miden mínimo 300px. Si caben más, se ponen al lado.
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+// === PÁGINA DE LOGIN ===
 .page-login {
-  // Usamos el mixin para centrar el formulario en toda la pantalla
-  @include m.flex-center; 
-  flex-grow: 1; // Ocupa el espacio restante
-  padding: 2rem;
+    // Usa el mixin para centrar vertical y horizontalmente
+    @include m.centrar-flex; 
+    min-height: 90vh; // Ocupa casi toda la altura de la pantalla
+    padding: 20px;
+    background-color: v.$color-fondo; // Asegura el color de fondo rosita
 }

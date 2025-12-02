@@ -1,45 +1,111 @@
 // styles/_components.scss
-@use '_variables' as v;
-@use '_mixins' as m;
+@use 'variables' as v;
+@use 'mixins' as m;
 
+// --- TARJETA DE CAMA (Para el mapa) ---
+.tarjeta-cama {
+    background-color: v.$blanco;
+    border-radius: v.$radio-borde;
+    padding: 20px; // Un poco más de relleno
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); // Sombra suave
+    border: 1px solid #eee; // Borde sutil
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    h3 {
+        margin: 0;
+        font-size: 1.3rem;
+        color: v.$color-secundario;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // El estado (la etiqueta de color)
+    .estado {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        border-radius: 20px; // Más redondeado
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    // === VARIANTES DE COLOR ===
+    &.urgente {
+        border-left: 5px solid v.$color-urgente-borde;
+        background-color: #fff5f5; // Fondo rojizo muy suave
+        .estado { background: v.$color-urgente-bg; color: v.$color-urgente-texto; }
+    }
+    &.ocupada {
+        border-left: 5px solid v.$color-ocupada-borde;
+        background-color: #f5faff; // Fondo azulado muy suave
+        .estado { background: v.$color-ocupada-bg; color: v.$color-ocupada-texto; }
+    }
+    &.libre {
+        border-left: 5px solid v.$color-libre-borde;
+        background-color: #f5fff7; // Fondo verdoso muy suave
+        opacity: 0.8;
+        .estado { background: v.$color-libre-bg; color: v.$color-libre-texto; border: 1px solid v.$color-libre-borde;}
+    }
+}
+
+// --- LOGIN CARD (Arreglando el centrado) ---
 .login-card {
-  background-color: v.$color-white;
-  padding: 2rem;
-  border-radius: v.$border-radius;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 400px;
-  
-  // Nesting (Anidado)
-  h2 {
-    color: v.$color-primary;
-    margin-top: 0;
-  }
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-  
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
-
-  input {
+    background: v.$blanco;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); // Sombra más profesional
     width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box; // Para que el padding no rompa el ancho
-  }
+    max-width: 420px; // Un poco más ancho
+    text-align: center; // Centra el título
+
+    h2 {
+        color: v.$color-primario;
+        margin-bottom: 1.5rem;
+    }
 }
 
-// Implementación del Mixin de botón
-.btn {
-  width: 100%;
-  
-  &--primary {
-    @include m.button-style(v.$color-primary, v.$color-white);
-  }
+// --- FORMULARIOS ---
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left; // ¡IMPORTANTE! Alinea las etiquetas a la izquierda
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: v.$color-texto;
+    }
+
+    input {
+        width: 100%; // Ocupa todo el ancho
+        padding: 12px;
+        border: 2px solid #eee;
+        border-radius: 6px;
+        font-family: inherit;
+        transition: border-color 0.3s;
+
+        &:focus {
+            outline: none;
+            border-color: v.$color-primario; // Color al hacer click
+        }
+    }
+}
+
+.btn-login {
+    @include m.estilo-boton(v.$color-primario, v.$blanco);
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-top: 1rem;
 }

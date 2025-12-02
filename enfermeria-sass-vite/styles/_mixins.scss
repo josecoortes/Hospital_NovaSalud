@@ -1,24 +1,22 @@
-// styles/_mixins.scss
-
-// Mixin para Flexbox centrado
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// Mixin para centrar cosas (Flexbox)
+@mixin centrar-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-// Mixin para botones (recibe parámetros)
-@mixin button-style($bg-color, $text-color) {
-  background-color: $bg-color;
-  color: $text-color;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
-
-  &:hover {
-    background-color: darken($bg-color, 10%); // Función nativa de Sass
-  }
+// Mixin para estilo de botones
+@mixin estilo-boton($fondo, $texto) {
+    background-color: $fondo;
+    color: $texto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    &:hover {
+        opacity: 0.9; // Al pasar el ratón se aclara un poco
+    }
 }

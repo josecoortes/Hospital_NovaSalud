@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Planta 1</title>
+</head>
+<body>
+
+    <header class="header">
+        <h1>🏥 Planta 1 - Ala Norte</h1>
+        <nav>
+            <a href="index.html">Cerrar Turno</a>
+        </nav>
+    </header>
+
+    <main class="mapa-hospital">
+        
+        <h2>Estado de Habitaciones</h2>
+
+        <div class="grid-habitaciones">
+
+            <article class="tarjeta-cama urgente">
+                <h3>101 <span class="estado">⚠ Alerta</span></h3>
+                <p><strong>Juan M. (64a)</strong></p>
+                <p>Patología: Cardíaca. Monitorizar cada hora.</p>
+            </article>
+
+            <article class="tarjeta-cama ocupada">
+                <h3>102 <span class="estado">Estable</span></h3>
+                <p><strong>Ana G. (32a)</strong></p>
+                <p>Post-operatorio. Dieta blanda.</p>
+            </article>
+
+            <article class="tarjeta-cama libre">
+                <h3>103 <span class="estado">Limpieza</span></h3>
+                <p>Esperando desinfección.</p>
+                <p><em>Cama vacía</em></p>
+            </article>
+
+            <article class="tarjeta-cama libre">
+                <h3>104 <span class="estado">Disponible</span></h3>
+                <p>Lista para ingreso.</p>
+            </article>
+
+             <article class="tarjeta-cama ocupada">
+                <h3>105 <span class="estado">Estable</span></h3>
+                <p><strong>Luis P. (88a)</strong></p>
+                <p>Respiratorio. Suero 24h.</p>
+            </article>
+
+        </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

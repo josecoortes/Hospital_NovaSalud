@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Triaje</title>
+  <script type="module" crossorigin src="./assets/main-B813LKOh.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-CatblPBV.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+    <header class="bg-white shadow p-4 mb-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-gray-700">Nuevo Triaje de Paciente</h1>
+            <a href="index.html" class="text-blue-600 hover:underline">Cancelar</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-2xl flex-grow">
+        <form class="bg-white p-6 md:p-8 rounded-lg shadow-md space-y-6">
+            
+            <div>
+                <label class="block text-gray-700 font-semibold mb-2">Nombre del Paciente</label>
+                <input type="text" placeholder="Nombre completo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Edad</label>
+                    <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Hora</label>
+                    <input type="time" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-semibold mb-2">Síntomas</label>
+                <textarea rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-semibold mb-3">Prioridad</label>
+                <div class="space-y-2">
+                    <label class="flex items-center p-3 border rounded cursor-pointer hover:bg-red-50">
+                        <input type="radio" name="prioridad" class="text-red-600 focus:ring-red-500">
+                        <span class="ml-2 font-bold text-red-600">🔴 Emergencia</span>
+                    </label>
+                    <label class="flex items-center p-3 border rounded cursor-pointer hover:bg-yellow-50">
+                        <input type="radio" name="prioridad" class="text-yellow-500 focus:ring-yellow-500">
+                        <span class="ml-2 font-bold text-yellow-600">🟡 Urgente</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="button" class="w-full bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition">
+                Guardar
+            </button>
+        </form>
+    </main>
+    <br>
+</body>
+</html>

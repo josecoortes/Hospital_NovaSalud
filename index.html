@@ -19,13 +19,15 @@
     <main class="container">
         <h2>Menú de Opciones</h2>
         <hr><br>
-        <nav>
-            <a href="pages/Lista_de_citas.html" class="btn">📅 Gestión de Citas</a>
-            <a href="pages/historica_clinica.html" class="btn">📂 Historia Clínica</a>
-            <a href="pages/Búsqueda_de_pacientes.html" class="btn">🔍 Búsqueda de Pacientes</a>
-            <a href="enfermeria-sass-vite/dist/index.html" class="btn">🔒 Login Enfermeria</a>
-            <a href="login.html" class="cerrar_sesion">Cerrar Sesión</a>
-        </nav>
+        <nav style="display: flex; flex-direction: column; gap: 15px;">
+    
+    <a href="pages/Lista_de_citas.html" class="btn">📅 Gestión de Citas</a>
+    <a href="pages/historica_clinica.html" class="btn">📂 Historia Clínica</a>
+    <a href="pages/Búsqueda_de_pacientes.html" class="btn">🔍 Búsqueda de Pacientes</a>
+    <a href="enfermeria-sass-vite/dist/index.html" class="btn" style="background-color: #e91e63;">🏥 Módulo Enfermería (Sass)</a>
+    <a href="urgencias-tailwind-vite/dist/index.html" class="btn" style="background-color: #dc2626;">🚑 Módulo Urgencias (Tailwind)</a>
+    <a href="login.html" style="margin-top: 20px; color: red; text-decoration: none;">Cerrar Sesión</a>
+</nav>
     </main>
 
 </body>

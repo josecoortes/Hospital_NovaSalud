@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/src/main.css" rel="stylesheet">
-    <title>Triaje</title>
+    <title>Nuevo Triaje</title>
+    <script type="module" src="/src/main.js"></script>
 </head>
-<body>
-    
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+    <header class="bg-white shadow p-4 mb-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-gray-700">Nuevo Triaje de Paciente</h1>
+            <a href="index.html" class="text-blue-600 hover:underline">Cancelar</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-2xl flex-grow">
+        <form class="bg-white p-6 md:p-8 rounded-lg shadow-md space-y-6">
+            
+            <div>
+                <label class="block text-gray-700 font-semibold mb-2">Nombre del Paciente</label>
+                <input type="text" placeholder="Ej: Pepito Grillo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition">
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Edad</label>
+                    <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Hora Llegada</label>
+                    <input type="time" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-semibold mb-2">Motivo de consulta / Síntomas</label>
+                <textarea rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-semibold mb-3">Prioridad (Sistema Manchester)</label>
+                <div class="space-y-2">
+                    <label class="flex items-center p-3 border rounded cursor-pointer hover:bg-red-50">
+                        <input type="radio" name="prioridad" class="text-red-600 focus:ring-red-500">
+                        <span class="ml-2 font-bold text-red-600">🔴 Emergencia (Inmediata)</span>
+                    </label>
+                    <label class="flex items-center p-3 border rounded cursor-pointer hover:bg-orange-50">
+                        <input type="radio" name="prioridad" class="text-orange-500 focus:ring-orange-500">
+                        <span class="ml-2 font-bold text-orange-500">🟠 Muy Urgente (10 min)</span>
+                    </label>
+                    <label class="flex items-center p-3 border rounded cursor-pointer hover:bg-yellow-50">
+                        <input type="radio" name="prioridad" class="text-yellow-500 focus:ring-yellow-500">
+                        <span class="ml-2 font-bold text-yellow-600">🟡 Urgente (60 min)</span>
+                    </label>
+                    <label class="flex items-center p-3 border rounded cursor-pointer hover:bg-green-50">
+                        <input type="radio" name="prioridad" class="text-green-500 focus:ring-green-500">
+                        <span class="ml-2 font-bold text-green-600">🟢 Normal (2 horas)</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="button" class="w-full bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition transform hover:scale-[1.02]">
+                Guardar Triaje
+            </button>
+        </form>
+    </main>
+
+    <br>
 </body>
 </html>
